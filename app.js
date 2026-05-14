@@ -153,7 +153,59 @@ console.log(a)
 
 fs.writeFileSync("text2.txt",a)
 
+let x = [1,1,2,5,6,7,8,8]
+let y =[];
+let v =[]
 
+for(i=0; i< x.length;i++){
+if(!y.includes(x[i])){
+    y.push(x[i])
+}else{
+    v.push(x[i])
+    console.log(x[i],"alreadey add")
+}
+console.log(y,v,y.length,x.length)
+
+}
+
+
+let fruits = ["apple", "banana", "apple", "orange", "banana"];
+let count ={};
+fruits.forEach(fru => {
+    if(count[fru]){
+        count[fru]++
+    }else{
+        count[fru] = 1
+    }
+});
+
+let w =[1,2,3,4,5,6,7];
+
+let max = w[0];
+let min=w[0];
+for(let num of w){
+    if(num > max){
+        max = num;
+    }else if(num < min ){
+        min = num
+    }
+}
+
+//console.log(count)
+console.log("min ", min)
+console.log("max",max)
+
+
+let str = "abhishek";
+let asdf = [];
+let as = str.split("")
+console.log(as)
+for(let i = (as.length)-1 ; i >=0; i--){
+asdf.push(as[i])
+}
+let abhi = asdf.join("")
+
+console.log(abhi)
 app.listen(PORT , ()=>{
     console.log("Server run on ",PORT)
 })
